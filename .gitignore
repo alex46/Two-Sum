@@ -1,0 +1,42 @@
+public class Solution {
+    public static int[] twoSum(int[] numbers, int target) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        
+        if(numbers==null) return null;
+        
+        int[] answer = new int[2];
+       
+        int len = answer.length-1;
+       // Arrays.sort(numbers);
+        
+        //int i = 0;
+        
+        for(int i = 0; i < numbers.length-1; i++){
+            for(int j = i+1; j < numbers.length;j++){
+               int sum = numbers[i]+numbers[j]; 
+               
+                if(sum == target){
+                answer[0] = i+1;
+                answer[1] = j+1;
+                return answer;
+            }
+             else continue;
+                
+            }
+        }
+        return null;
+        
+       
+}
+    
+    public static void main(String[] args){
+        int[] numbers = {5,75,25};
+        int[] result = twoSum(numbers,100);
+        
+        for(int i = 0; i <result.length;i++){
+            System.out.println(result[i]);
+        }
+        
+    }
+}
